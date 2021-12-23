@@ -89,7 +89,8 @@ void deletelastnode(struct node *head){
     free(p);
 
 }
-
+// In delete first node we have to change head so we have to pass 
+//address of head not copy so that what we do change can reflect in main
 void deletefirstnode(struct node **head){
     // *head=(*head)->next;
     struct node *temp;
@@ -112,6 +113,8 @@ void deleteatmiddile(int n){
         temp=temp->next;
     }
 }
+// In reverse function we have to change head so we have to pass 
+//address of head not copy so that what we do change can reflect in main
 void reverse(struct node **head){
    struct node *current,*prev=NULL,*next=NULL;
    current=*head;
